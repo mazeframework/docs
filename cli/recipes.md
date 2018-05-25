@@ -4,10 +4,6 @@
 
 Maze generators can use a recipe to generate your application, and scaffold your application with controllers, models and views. Using a recipe you can get started with an maze application that extends or modifies the standard built in generator or provides additional features. For example you might want an API application that only renders JSON or use React or AngularJS for views.
 
-### Recipe repository
-
-Visit the [recipe repository](https://github.com/mazeframework/recipes) to discover what recipes are available. The available recipes are listed in the [Contributions.md](https://github.com/mazeframework/recipes/blob/master/Contributions.md) file. Each recipe contributor provides additional information in their own Readme.
-
 ### Maze New Command with a recipe
 
 Add a recipe name command line argument to create a new maze application from the recipe.  
@@ -30,11 +26,11 @@ Options:
 
 ### Example Usage
 
-Using `maze new microsecond-blog -r damianham/modular` will generate a skeleton Maze application in `./microsecond-blog` using the _modular_ recipe that was provided by the github user _damianham_.
+Using `maze new microsecond-blog -r damianham/mazebase` will generate a skeleton Maze application in `./microsecond-blog` using the _mazebase_ recipe that was provided by the github user _damianham_.
 
 You can have a running web application in a matter of minutes:
 
-1. `maze new microsecond-blog -r misc/modular --deps`
+1. `maze new microsecond-blog -r damianham/mazebase --deps`
 2. `cd microsecond-blog`
 3. `maze watch`
 
@@ -43,7 +39,7 @@ Now open a web browser for your new maze app at [http://localhost:3000](http://l
 Full example in terminal:
 
 ```text
-$ maze new microsecond-blog -r damianham/modular
+$ maze new microsecond-blog -r damianham/mazebase
 Rendering App microsecond-blog in ./microsecond-blog
 new       .maze.yml
 new       .maze_secret_key
@@ -74,6 +70,34 @@ $ maze watch
 02:58:31 Server     | (INFO) Startup Time 00:00:00.000182000
 02:58:31 Watcher    | Watching 10 client files...
 ```
+
+### Recipe sources
+
+Maze can use a recipe from the following sources;
+
+- The Maze framework recipe repository
+- A github repository
+- A local file system folder
+- A URL
+
+### Recipe repository
+
+Visit the [recipe repository](https://github.com/mazeframework/recipes) to discover what recipes are available. The available recipes are listed in the [Contributions.md](https://github.com/mazeframework/recipes/blob/master/Contributions.md) file. Each recipe contributor provides additional information in their own Readme.
+
+### Github repository
+
+Specify a Github username and repository as the recipe source as in the example above.
+E.g `maze new microsecond-blog -r damianham/mazebase` will generate a skeleton Maze application in `./microsecond-blog` from the github repository https://github.com/damianham/mazebase
+
+### Local file system folder
+
+Specify a local file system folder as the recipe source.  Use the absolute path to the recipe folder.
+E.g. `maze new microsecond-blog -r /home/damian/recipes/myrecipe` will generate a skeleton Maze application in `./microsecond-blog` from the recipe located in the folder _/home/damian/recipes/myrecipe_.
+
+### From a URL
+
+Specify a URL to a zip file as the recipe source.  The zip file must contain the standard conttents of a recipe.
+E.g. `maze new microsecond-blog -r https://github.com/mazeframework/recipes/blob/master/dist/react/preact_redux.zip` will generate a skeleton Maze application in `./microsecond-blog` from the recipe located in the zip file at the URL https://github.com/mazeframework/recipes/blob/master/dist/react/preact_redux.zip.
 
 ### Maze Generate Command
 
@@ -121,4 +145,3 @@ The scaffold generator would then use a recipe located at `http://my.example.org
 If you set a recipe source URL you should also change the name of the recipe and/or you should clear the recipe cache otherwise a recipe with the same name in the recipe cache will be used rather than a recipe from the given recipe source.
 
 The recipe cache is located in the current working directory and is created any time you specify a recipe name that is downloaded from the repository. Since you would usually specify a recipe when creating a new application the recipe cache will be located in the parent folder of the new application in a folder called `.maze_recipe_cache`.
-
