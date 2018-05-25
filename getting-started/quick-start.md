@@ -4,7 +4,7 @@ This quick start guide will help you get a full stack web application running in
 
 It will take us just 7 steps. Let’s get started!
 
-![Let&#x2019;s get started!](https://raw.githubusercontent.com/mazeframework/site-assets/master/videos/maze-quick-start.gif)
+![Let&#x2019;s get started!](https://github.com/mazeframework/mazeframework.github.io/blob/master/assets/images/maze.svg)
 
 ## 1. Install dependencies
 
@@ -18,29 +18,30 @@ Instructions for OS X using homebrew and Debian/Ubuntu are below. See full insta
 
 #### OS X with homebrew
 
-Installing maze with homebrew also installs crystal
+Installing crystal with homebrew
 
 ```text
-brew install maze
+brew update
+brew install crystal-lang
 ```
 
 #### Ubuntu or Debian
 
-First install crystal
+First install crystal and required libraries
 
 ```text
 curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
-sudo apt-get install build-essential crystal
+sudo apt-get install -y build-essential crystal git libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
 ```
 
-Then install maze \(from source\)
+Then install maze \(from github\)
 
 ```text
-sudo apt-get install libreadline-dev libsqlite3-dev libpq-dev libmysqlclient-dev libssl-dev libyaml-dev
-curl -L https://github.com/mazeframework/maze/archive/stable.tar.gz | tar xz
-cd maze-stable/
-shards install
-make install
+sudo apt-get install
+git clone https://github.com/mazeframework/maze.git
+cd maze/
+shards build maze
+sudo cp bin/maze /usr/local/bin
 ```
 
 {% hint style="info" %}
@@ -138,5 +139,4 @@ maze watch
 
 Here is a demo and the source code is available on [Github](https://github.com/faustinoaq/pet-tracker).
 
-![Quick Start Demo](https://raw.githubusercontent.com/mazeframework/site-assets/master/videos/quick-start-demo.gif)
-
+![Quick Start Demo](https://raw.githubusercontent.com/amberframework/site-assets/master/videos/quick-start-demo.gif)

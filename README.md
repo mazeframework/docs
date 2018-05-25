@@ -1,8 +1,8 @@
 # Introduction
 
-Maze is a web development framework written in the Crystal language which implements the server-side MVC pattern using the object-oriented paradigm. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Phoenix, Ruby on Rails or Python's Django.
+Maze is a web development framework written in the Crystal language which implements the server-side MVC pattern using the object-oriented paradigm. Many of its components and concepts will seem familiar to those of us with experience in other web frameworks like Phoenix, Ruby on Rails or Python's Django.  Maze is based on [Amber](https://amberframework.org) and the purpose of Maze is to extend Amber with specific features and design goals that are outside of, and sometimes incompatible with, the core goals of the Amber project.  See the [Maze](https://github.com/mazeframework/maze) project on github for details about the main differences between Maze and Amber.
 
-![Maze Framework](https://raw.githubusercontent.com/mazeframework/site-assets/master/videos/maze-animated-logo.gif)
+![Maze Framework](https://github.com/mazeframework/mazeframework.github.io/blob/master/assets/images/maze.svg)
 
 Maze aims to deliver developer happiness, productivity, and bare metal performance. The Crystal language is heavily inspired on Ruby delivering familiarity and productivity making it easy to read and write code with a lower learning curve for experienced Ruby developers.
 
@@ -35,4 +35,3 @@ Learning a new framework can be intimidating and exciting at the same time. To h
 If you are new, you should start off with the [guides](guides/).
 
 If you want a step by step tutorial try the [quick start](getting-started/).
-
